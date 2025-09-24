@@ -1,5 +1,7 @@
 /**
  * IDevice a high level representation of apple mobile devices.
+ * @author Jacob, Samuel, Meiko, Son
+ * @version 1.0
  */
 public abstract class IDevice
 {
@@ -24,7 +26,41 @@ public abstract class IDevice
         return purpose;
     }
 
-    public abstract String printDetails();
+    /**
+     * Abstract method that must be implemented by child classes
+     * to print detailed information about the device's specific features.
+     */
+    public abstract void printDetails();
+
+    /**
+     * Returns a string representation of this IDevice.
+     *
+     * @return formatted string containing device purpose
+     */
+    @Override
+    public String toString() {
+        return "IDevice [purpose=" + purpose + "]";
+    }
+
+    /**
+     * Abstract equals method for comparing IDevice objects.
+     * Must be implemented by child classes.
+     *
+     * @param obj the object to compare with
+     * @return true if objects are equal, false otherwise
+     */
+    @Override
+    public abstract boolean equals(Object obj);
+
+    /**
+     * Abstract hashCode method for generating hash codes.
+     * Must be implemented by child classes.
+     *
+     * @return hash code for this object
+     */
+    @Override
+    public abstract int hashCode();
+
 
 
 }
