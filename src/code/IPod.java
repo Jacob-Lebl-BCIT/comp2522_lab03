@@ -1,0 +1,105 @@
+import java.util.Objects;
+
+public class IPod extends IDevice
+{
+
+    // The purpose of all IPod instances is music.
+    private static final String PURPOSE = "music";
+    // The number of songs stored on the iPod.
+    private int numStoredSongs;
+    // The maximum volume level of the iPod in decibels.
+    private double maxVolumeDB;
+
+    /**
+     * Constructor for IDevice.
+     *
+     * @param numStoredSongs the number of songs stored on the iPod.
+     * @param maxVolumeDB    the maximum volume level of the iPod in decibels.
+     */
+    public IPod(final int numStoredSongs,
+                final double maxVolumeDB)
+    {
+        super(PURPOSE);
+        this.numStoredSongs = numStoredSongs;
+    }
+
+    /**
+     * printDetails prints all the instance variables of the IPod.
+     *
+     * @return an English description of the IPod's instance variables.
+     */
+    @Override
+    public String printDetails()
+    {
+        return numStoredSongs + " number of songs stored, "
+            + maxVolumeDB + " maximum volume in decibels";
+    }
+
+
+    /**
+     * @return all instance variables in a single String.
+     */
+    @Override
+    public String toString() {
+        // Get the string from the superclass.
+        String IDeviceString = super.toString();
+        // Sum of all instance variables.
+        return IDeviceString + " " + numStoredSongs + " " + maxVolumeDB;
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (!(o instanceof IPod otherIPod))
+        {
+            return false;
+        }
+        return numStoredSongs == otherIPod.numStoredSongs;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return Objects.hashCode(numStoredSongs);
+    }
+
+    // === Setters & Getters ===
+
+    /**
+     * @return the number of songs stored on the iPod.
+     *
+     */
+    public int getNumStoredSongs()
+    {
+        return numStoredSongs;
+    }
+
+    /**
+     * setNumStoredSongs sets the number of songs stored on the iPod.
+     *
+     * @param numStoredSongs int of stored songs.
+     */
+    public void setNumStoredSongs(final int numStoredSongs)
+    {
+        this.numStoredSongs = numStoredSongs;
+    }
+
+    /**
+     * @return the maximum volume level of the iPod in decibels.
+     *
+     */
+    public double getMaxVolumeDB()
+    {
+        return maxVolumeDB;
+    }
+
+    /**
+     * setMaxVolumeDB sets the maximum volume level of the iPod in decibels.
+     *
+     * @param maxVolumeDB volume in decibels.
+     */
+    public void setMaxVolumeDB(final double maxVolumeDB)
+    {
+        this.maxVolumeDB = maxVolumeDB;
+    }
+}
