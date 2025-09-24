@@ -1,5 +1,13 @@
 import java.util.Objects;
 
+/**
+ * Represents an Apple iPod device focused on music playback.
+ * This class extends IDevice and provides specific functionality
+ * for music-related features and storage.
+ *
+ * @author Jacob, Samuel, Meiko, Son
+ * @version 1.0
+ */
 public class IPod extends IDevice
 {
 
@@ -29,10 +37,10 @@ public class IPod extends IDevice
      * @return an English description of the IPod's instance variables.
      */
     @Override
-    public String printDetails()
+    public void printDetails()
     {
-        return numStoredSongs + " number of songs stored, "
-            + maxVolumeDB + " maximum volume in decibels";
+        System.out.println("Number of stored songs: " + numStoredSongs);
+        System.out.println("Max volume DB: " + maxVolumeDB);
     }
 
 
