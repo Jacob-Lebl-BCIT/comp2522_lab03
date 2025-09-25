@@ -6,7 +6,8 @@
  * @author Jacob, Samuel, Meiko, Son
  * @version 1.0
  */
-public class IPhone16 extends IPhone {
+public class IPhone16 extends IPhone
+{
     /** Whether this iPhone has a high-resolution camera */
     private boolean highResCamera;
 
@@ -21,8 +22,9 @@ public class IPhone16 extends IPhone {
      * @param highResCamera whether the device has a high-resolution camera
      * @param memorySize the memory size in gigabytes
      */
-    public IPhone16(double remainingMinutes, String carrierName,
-                    boolean highResCamera, int memorySize) {
+    public IPhone16(final double remainingMinutes, final String carrierName,
+                    final boolean highResCamera, final int memorySize)
+    {
         super(remainingMinutes, carrierName);
         this.highResCamera = highResCamera;
         this.memorySize = memorySize;
@@ -33,7 +35,8 @@ public class IPhone16 extends IPhone {
      *
      * @return true if the device has a high-resolution camera, false otherwise
      */
-    public boolean hasHighResCamera() {
+    public boolean hasHighResCamera()
+    {
         return highResCamera;
     }
 
@@ -42,7 +45,8 @@ public class IPhone16 extends IPhone {
      *
      * @param highResCamera true if the device has a high-resolution camera, false otherwise
      */
-    public void setHighResCamera(boolean highResCamera) {
+    public void setHighResCamera(final boolean highResCamera)
+    {
         this.highResCamera = highResCamera;
     }
 
@@ -51,7 +55,8 @@ public class IPhone16 extends IPhone {
      *
      * @return the memory size in gigabytes
      */
-    public int getMemorySize() {
+    public int getMemorySize()
+    {
         return memorySize;
     }
 
@@ -60,7 +65,8 @@ public class IPhone16 extends IPhone {
      *
      * @param memorySize the new memory size in gigabytes
      */
-    public void setMemorySize(int memorySize) {
+    public void setMemorySize(final int memorySize)
+    {
         this.memorySize = memorySize;
     }
 
@@ -70,7 +76,8 @@ public class IPhone16 extends IPhone {
      * @return formatted string containing iPhone 16 information
      */
     @Override
-    public String toString() {
+    public String toString()
+    {
         return super.toString().replace("]", ", highResCamera=" + highResCamera
                 + ", memorySize=" + memorySize + " GB]");
     }
@@ -84,7 +91,8 @@ public class IPhone16 extends IPhone {
      * @return true if objects are equal, false otherwise
      */
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(final Object obj)
+    {
         if (obj instanceof IPhone16) {
             IPhone16 other = (IPhone16) obj;
             return super.equals(other) && this.highResCamera == other.highResCamera;
@@ -99,7 +107,8 @@ public class IPhone16 extends IPhone {
      * @return hash code for this object
      */
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         return Double.hashCode(getRemainingMinutes()) + (highResCamera ? 1 : 0);
     }
 }

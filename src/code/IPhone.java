@@ -6,7 +6,8 @@
  * @author Jacob, Samuel, Meiko, Son
  * @version 1.0
  */
-public class IPhone extends IDevice {
+public class IPhone extends IDevice
+{
     /** The number of minutes remaining on the phone plan */
     private double remainingMinutes;
 
@@ -19,7 +20,8 @@ public class IPhone extends IDevice {
      * @param remainingMinutes the number of minutes remaining on the phone plan
      * @param carrierName the name of the carrier service provider
      */
-    public IPhone(double remainingMinutes, String carrierName) {
+    public IPhone(final double remainingMinutes, final String carrierName)
+    {
         super("talking");
         this.remainingMinutes = remainingMinutes;
         this.carrierName = carrierName;
@@ -30,7 +32,8 @@ public class IPhone extends IDevice {
      *
      * @return the remaining minutes
      */
-    public double getRemainingMinutes() {
+    public double getRemainingMinutes()
+    {
         return remainingMinutes;
     }
 
@@ -39,7 +42,8 @@ public class IPhone extends IDevice {
      *
      * @param remainingMinutes the new remaining minutes
      */
-    public void setRemainingMinutes(double remainingMinutes) {
+    public void setRemainingMinutes(final double remainingMinutes)
+    {
         this.remainingMinutes = remainingMinutes;
     }
 
@@ -48,7 +52,8 @@ public class IPhone extends IDevice {
      *
      * @return the carrier name
      */
-    public String getCarrierName() {
+    public String getCarrierName()
+    {
         return carrierName;
     }
 
@@ -57,7 +62,8 @@ public class IPhone extends IDevice {
      *
      * @param carrierName the new carrier name
      */
-    public void setCarrierName(String carrierName) {
+    public void setCarrierName(final String carrierName)
+    {
         this.carrierName = carrierName;
     }
 
@@ -65,7 +71,8 @@ public class IPhone extends IDevice {
      * Prints detailed information about this iPhone's features.
      */
     @Override
-    public void printDetails() {
+    public void printDetails()
+    {
         System.out.println("Carrier Name: " + carrierName);
         System.out.println("Remaining Minutes: " + remainingMinutes);
     }
@@ -76,7 +83,8 @@ public class IPhone extends IDevice {
      * @return formatted string containing iPhone information
      */
     @Override
-    public String toString() {
+    public String toString()
+    {
         return super.toString() + ", carrierName=" + carrierName
                 + ", remainingMinutes=" + remainingMinutes + "]";
     }
@@ -89,7 +97,8 @@ public class IPhone extends IDevice {
      * @return true if objects are equal, false otherwise
      */
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(final Object obj)
+    {
         if (obj instanceof IPhone) {
             IPhone iPhone = (IPhone) obj;
             return iPhone.remainingMinutes == this.remainingMinutes;
@@ -104,7 +113,8 @@ public class IPhone extends IDevice {
      * @return hash code for this object
      */
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         return Double.hashCode(remainingMinutes);
     }
 }
