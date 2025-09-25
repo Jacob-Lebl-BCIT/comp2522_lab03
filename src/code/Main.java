@@ -6,7 +6,8 @@
  * @author Jacob, Samuel, Meiko, Son
  * @version 1.0
  */
-public class Main {
+public class Main
+{
 
     /** Default number of songs for testing */
     private static final int DEFAULT_SONG_COUNT = 300;
@@ -25,7 +26,8 @@ public class Main {
      *
      * @param args command line arguments (not used)
      */
-    public static void main(final String[] args) {
+    public static void main(final String[] args)
+    {
         // Create IPod objects
         final IPod ipod1 = new IPod(DEFAULT_SONG_COUNT, DEFAULT_VOLUME_DB);
         final IPod ipod2 = new IPod(400, 85.0);

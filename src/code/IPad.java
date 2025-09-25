@@ -6,7 +6,8 @@
  * @author Jacob, Samuel, Meiko, Son
  * @version 1.0
  */
-public class IPad extends IDevice {
+public class IPad extends IDevice
+{
     /**
      * Whether this iPad has a protective case
      */
@@ -23,7 +24,8 @@ public class IPad extends IDevice {
      * @param hasCase   whether the iPad has a protective case
      * @param osVersion the operating system version
      */
-    public IPad(boolean hasCase, String osVersion) {
+    public IPad(final boolean hasCase, final String osVersion)
+    {
         super("learning");
         this.hasCase = hasCase;
         this.osVersion = osVersion;
@@ -34,7 +36,8 @@ public class IPad extends IDevice {
      *
      * @return true if the iPad has a case, false otherwise
      */
-    public boolean hasCase() {
+    public boolean hasCase()
+    {
         return hasCase;
     }
 
@@ -43,7 +46,8 @@ public class IPad extends IDevice {
      *
      * @param hasCase true if the iPad has a case, false otherwise
      */
-    public void setHasCase(boolean hasCase) {
+    public void setHasCase(final boolean hasCase)
+    {
         this.hasCase = hasCase;
     }
 
@@ -52,7 +56,8 @@ public class IPad extends IDevice {
      *
      * @return the operating system version
      */
-    public String getOsVersion() {
+    public String getOsVersion()
+    {
         return osVersion;
     }
 
@@ -61,7 +66,8 @@ public class IPad extends IDevice {
      *
      * @param osVersion the new operating system version
      */
-    public void setOsVersion(String osVersion) {
+    public void setOsVersion(final String osVersion)
+    {
         this.osVersion = osVersion;
     }
 
@@ -69,7 +75,8 @@ public class IPad extends IDevice {
      * Prints detailed information about this iPad's features.
      */
     @Override
-    public void printDetails() {
+    public void printDetails()
+    {
         System.out.println("OS Version: " + osVersion);
         System.out.println("Has Case: " + hasCase);
     }
@@ -80,7 +87,8 @@ public class IPad extends IDevice {
      * @return formatted string containing iPad information
      */
     @Override
-    public String toString() {
+    public String toString()
+    {
         return super.toString() + ", hasCase=" + hasCase
                 + ", osVersion=" + osVersion + "]";
     }
@@ -93,7 +101,8 @@ public class IPad extends IDevice {
      * @return true if objects are equal, false otherwise
      */
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(final Object obj)
+    {
         if (obj instanceof IPad) {
             IPad ipad = (IPad) obj;
             return ipad.osVersion.equals(this.osVersion);
@@ -108,7 +117,8 @@ public class IPad extends IDevice {
      * @return hash code for this object
      */
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         return osVersion.hashCode();
     }
 }

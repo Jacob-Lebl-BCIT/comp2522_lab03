@@ -13,7 +13,7 @@ public abstract class IDevice
      *
      * @param purpose short description of the device's purpose.
      */
-    public IDevice(String purpose)
+    public IDevice(final String purpose)
     {
         this.purpose = purpose;
     }
@@ -38,7 +38,8 @@ public abstract class IDevice
      * @return formatted string containing device purpose
      */
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "IDevice [purpose=" + purpose + "]";
     }
 
@@ -50,7 +51,7 @@ public abstract class IDevice
      * @return true if objects are equal, false otherwise
      */
     @Override
-    public abstract boolean equals(Object obj);
+    public abstract boolean equals(final Object obj);
 
     /**
      * Abstract hashCode method for generating hash codes.
