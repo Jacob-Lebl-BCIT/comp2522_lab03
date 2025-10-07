@@ -2,11 +2,8 @@ import java.util.Objects;
 
 public class IPad extends IDevice
 {
-    // The purpose of all IPad is learning
     private static final String purpose = "learning";
-    // The IPad has a case or not
     private boolean hasCase;
-    // The operating system of the IPad
     private String osVersion;
 
     /**
@@ -60,6 +57,8 @@ public class IPad extends IDevice
         return Objects.hash(hasCase, osVersion);
     }
 
+    // === Setters & Getters ===
+
     /**
      * @return true if the iPad has a case, false otherwise.
      */
@@ -88,7 +87,8 @@ public class IPad extends IDevice
      *
      * @param osVersion String representing the OS version.
      */
-    public void setOsVersion(final String osVersion) {
+    public void setOsVersion(final String osVersion)
+    {
         this.osVersion = osVersion;
     }
 
