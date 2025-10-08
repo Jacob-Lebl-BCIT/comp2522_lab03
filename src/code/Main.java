@@ -35,15 +35,21 @@ public class Main
 
         // Test equality and inequality for IPod
         System.out.println("IPod Equality Test:");
-        if (!ipod1.equals(ipod2)) {
+        if (!ipod1.equals(ipod2))
+        {
             System.out.println("CORRECT: ipod1 is not equal to ipod2");
-        } else {
+        }
+        else
+        {
             System.out.println("INCORRECT: ipod1 should not be equal to ipod2");
         }
 
-        if (ipod1.equals(ipod3)) {
+        if (ipod1.equals(ipod3))
+        {
             System.out.println("CORRECT: ipod1 is equal to ipod3");
-        } else {
+        }
+        else
+        {
             System.out.println("INCORRECT: ipod1 should be equal to ipod3");
         }
         System.out.println();
@@ -55,15 +61,21 @@ public class Main
 
         // Test equality and inequality for IPad
         System.out.println("IPad Equality Test:");
-        if (!ipad1.equals(ipad2)) {
+        if (!ipad1.equals(ipad2))
+        {
             System.out.println("CORRECT: ipad1 is not equal to ipad2");
-        } else {
+        }
+        else
+        {
             System.out.println("INCORRECT: ipad1 should not be equal to ipad2");
         }
 
-        if (ipad1.equals(ipad3)) {
+        if (ipad1.equals(ipad3))
+        {
             System.out.println("CORRECT: ipad1 is equal to ipad3");
-        } else {
+        }
+        else
+        {
             System.out.println("INCORRECT: ipad1 should be equal to ipad3");
         }
         System.out.println();
@@ -75,15 +87,21 @@ public class Main
 
         // Test equality and inequality for IPhone
         System.out.println("IPhone Equality Test:");
-        if (!iphone1.equals(iphone2)) {
+        if (!iphone1.equals(iphone2))
+        {
             System.out.println("CORRECT: iphone1 is not equal to iphone2");
-        } else {
+        }
+        else
+        {
             System.out.println("INCORRECT: iphone1 should not be equal to iphone2");
         }
 
-        if (iphone1.equals(iphone3)) {
+        if (iphone1.equals(iphone3))
+        {
             System.out.println("CORRECT: iphone1 is equal to iphone3");
-        } else {
+        }
+        else
+        {
             System.out.println("INCORRECT: iphone1 should be equal to iphone3");
         }
         System.out.println();
@@ -95,15 +113,21 @@ public class Main
 
         // Test equality and inequality for IPhone16
         System.out.println("IPhone16 Equality Test:");
-        if (iphone16_1.equals(iphone16_2)) {
+        if (iphone16_1.equals(iphone16_2))
+        {
             System.out.println("CORRECT: iphone16_1 is equal to iphone16_2");
-        } else {
+        }
+        else
+        {
             System.out.println("INCORRECT: iphone16_1 should be equal to iphone16_2");
         }
 
-        if (!iphone16_1.equals(iphone16_3)) {
+        if (!iphone16_1.equals(iphone16_3))
+        {
             System.out.println("CORRECT: iphone16_1 is not equal to iphone16_3");
-        } else {
+        }
+        else
+        {
             System.out.println("INCORRECT: iphone16_1 should not be equal to iphone16_3");
         }
         System.out.println();
