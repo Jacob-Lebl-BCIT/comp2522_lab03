@@ -14,14 +14,32 @@ public class Main
     /** Default number of songs for testing */
     private static final int DEFAULT_SONG_COUNT = 300;
 
+    /** Alternate number of songs for testing */
+    private static final int ALTERNATE_SONG_COUNT = 400;
+
     /** Default volume in decibels for testing */
     private static final double DEFAULT_VOLUME_DB = 80.0;
+
+    /** Alternate volume in decibels for testing */
+    private static final double ALTERNATE_VOLUME_DB = 85.0;
+
+    /** Low volume in decibels for testing */
+    private static final double LOW_VOLUME_DB = 70.0;
 
     /** Default remaining minutes for phone plan testing */
     private static final double DEFAULT_REMAINING_MINUTES = 120.0;
 
+    /** Alternate remaining minutes for phone plan testing */
+    private static final double ALTERNATE_REMAINING_MINUTES = 180.0;
+
+    /** Low remaining minutes for phone plan testing */
+    private static final double LOW_REMAINING_MINUTES = 100.0;
+
     /** Default memory size in GB for iPhone 16 testing */
     private static final int DEFAULT_MEMORY_SIZE = 512;
+
+    /** Alternate memory size in GB for iPhone 16 testing */
+    private static final int ALTERNATE_MEMORY_SIZE = 256;
 
     /**
      * Main method that creates and tests various iDevice objects.
@@ -31,9 +49,13 @@ public class Main
     public static void main(final String[] args)
     {
         // Create IPod objects
-        final IPod ipod1 = new IPod(DEFAULT_SONG_COUNT, DEFAULT_VOLUME_DB);
-        final IPod ipod2 = new IPod(400, 85.0);
-        final IPod ipod3 = new IPod(DEFAULT_SONG_COUNT, 70.0);
+        final IPod ipod1;
+        final IPod ipod2;
+        final IPod ipod3;
+
+        ipod1 = new IPod(DEFAULT_SONG_COUNT, DEFAULT_VOLUME_DB);
+        ipod2 = new IPod(ALTERNATE_SONG_COUNT, ALTERNATE_VOLUME_DB);
+        ipod3 = new IPod(DEFAULT_SONG_COUNT, LOW_VOLUME_DB);
 
         // Test equality and inequality for IPod
         System.out.println("IPod Equality Test:");
@@ -57,9 +79,13 @@ public class Main
         System.out.println();
 
         // Create IPad objects
-        final IPad ipad1 = new IPad(true, "iPadOS 15");
-        final IPad ipad2 = new IPad(false, "iPadOS 14");
-        final IPad ipad3 = new IPad(true, "iPadOS 15");
+        final IPad ipad1;
+        final IPad ipad2;
+        final IPad ipad3;
+
+        ipad1 = new IPad(true, "iPadOS 15");
+        ipad2 = new IPad(false, "iPadOS 14");
+        ipad3 = new IPad(true, "iPadOS 15");
 
         // Test equality and inequality for IPad
         System.out.println("IPad Equality Test:");
@@ -83,9 +109,13 @@ public class Main
         System.out.println();
 
         // Create IPhone objects
-        final IPhone iphone1 = new IPhone(DEFAULT_REMAINING_MINUTES, "Verizon");
-        final IPhone iphone2 = new IPhone(180.0, "T-Mobile");
-        final IPhone iphone3 = new IPhone(DEFAULT_REMAINING_MINUTES, "AT&T");
+        final IPhone iphone1;
+        final IPhone iphone2;
+        final IPhone iphone3;
+
+        iphone1 = new IPhone(DEFAULT_REMAINING_MINUTES, "Verizon");
+        iphone2 = new IPhone(ALTERNATE_REMAINING_MINUTES, "T-Mobile");
+        iphone3 = new IPhone(DEFAULT_REMAINING_MINUTES, "AT&T");
 
         // Test equality and inequality for IPhone
         System.out.println("IPhone Equality Test:");
@@ -109,9 +139,13 @@ public class Main
         System.out.println();
 
         // Create IPhone16 objects
-        final IPhone16 iphone16_1 = new IPhone16(100.0, "Verizon", true, DEFAULT_MEMORY_SIZE);
-        final IPhone16 iphone16_2 = new IPhone16(100.0, "Verizon", true, 256);
-        final IPhone16 iphone16_3 = new IPhone16(100.0, "Verizon", false, DEFAULT_MEMORY_SIZE);
+        final IPhone16 iphone16_1;
+        final IPhone16 iphone16_2;
+        final IPhone16 iphone16_3;
+
+        iphone16_1 = new IPhone16(LOW_REMAINING_MINUTES, "Verizon", true, DEFAULT_MEMORY_SIZE);
+        iphone16_2 = new IPhone16(LOW_REMAINING_MINUTES, "Verizon", true, ALTERNATE_MEMORY_SIZE);
+        iphone16_3 = new IPhone16(LOW_REMAINING_MINUTES, "Verizon", false, DEFAULT_MEMORY_SIZE);
 
         // Test equality and inequality for IPhone16
         System.out.println("IPhone16 Equality Test:");
