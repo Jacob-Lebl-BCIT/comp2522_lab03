@@ -32,41 +32,21 @@ public class IPhone extends IDevice
         this.carrierName          = carrierName;
     }
 
-    /**
-     * Retrieves the number of minutes remaining on the phone plan.
-     *
-     * @return the remaining minutes
-     */
     public double getPlanRemainingMinutes()
     {
         return planRemainingMinutes;
     }
 
-    /**
-     * Sets the number of minutes remaining on the phone plan.
-     *
-     * @param planRemainingMinutes the new remaining minutes
-     */
     public void setPlanRemainingMinutes(final double planRemainingMinutes)
     {
         this.planRemainingMinutes = planRemainingMinutes;
     }
 
-    /**
-     * Retrieves the name of the carrier service provider.
-     *
-     * @return the carrier name
-     */
     public String getCarrierName()
     {
         return carrierName;
     }
 
-    /**
-     * Sets the name of the carrier service provider.
-     *
-     * @param carrierName the new carrier name
-     */
     public void setCarrierName(final String carrierName)
     {
         this.carrierName = carrierName;
@@ -91,12 +71,13 @@ public class IPhone extends IDevice
     public String toString()
     {
         return super.toString() + " [carrier=" + carrierName
-                + ", numberOfMinutesRemainingOnPhonePlan=" + planRemainingMinutes + "]";
+                                + ", numberOfMinutesRemainingOnPhonePlan=" + planRemainingMinutes + "]";
     }
 
     /**
      * Compares this iPhone with another object for equality.
-     * Two iPhones are considered equal if they have the same remaining minutes.
+     * Two iPhones are considered equal if they have the same
+     * remaining minutes in their plan.
      *
      * @param o the object to compare with
      * @return true if objects are equal, false otherwise
@@ -110,11 +91,6 @@ public class IPhone extends IDevice
         return Objects.equals(iPhone.planRemainingMinutes, planRemainingMinutes);
     }
 
-    /**
-     * Generates a hash code for this iPhone based on the remaining minutes.
-     *
-     * @return hash code for this object
-     */
     @Override
     public int hashCode()
     {
