@@ -34,23 +34,43 @@ public class IPhone16 extends IPhone
     }
 
 
+    /**
+     * Checks if this iPhone 16 has a high-resolution camera.
+     *
+     * @return true if the device has a high-resolution camera, false otherwise
+     */
     public boolean hasHighResCamera()
     {
         return highResCamera;
     }
 
 
+    /**
+     * Sets whether this iPhone 16 has a high-resolution camera.
+     *
+     * @param highResCamera true if the device has a high-resolution camera, false otherwise
+     */
     public void setHighResCamera(final boolean highResCamera)
     {
         this.highResCamera = highResCamera;
     }
 
+    /**
+     * Gets the memory size of this iPhone 16 in gigabytes (GB).
+     *
+     * @return the memory size in GB
+     */
     public int getMemorySizeGB()
     {
         return memorySizeGB;
     }
 
 
+    /**
+     * Sets the memory size of this iPhone 16 in gigabytes (GB).
+     *
+     * @param memorySizeGB the new memory size in GB
+     */
     public void setMemorySizeGB(final int memorySizeGB)
     {
         this.memorySizeGB = memorySizeGB;

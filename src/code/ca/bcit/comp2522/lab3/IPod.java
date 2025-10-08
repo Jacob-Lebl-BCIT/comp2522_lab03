@@ -27,22 +27,42 @@ public class IPod extends IDevice
 
     // === Setters & Getters ===
 
+    /**
+     * Gets the number of stored songs on this iPod.
+     *
+     * @return the number of stored songs
+     */
     public int getNumStoredSongs()
     {
         return numStoredSongs;
     }
 
+    /**
+     * Sets the number of stored songs on this iPod.
+     *
+     * @param numStoredSongs the new number of stored songs
+     */
     public void setNumStoredSongs(final int numStoredSongs)
     {
         this.numStoredSongs = numStoredSongs;
     }
 
+    /**
+     * Gets the maximum volume in decibels (dB) for this iPod.
+     *
+     * @return the maximum volume in dB
+     */
     public double getMaxVolumeDB()
     {
         return maxVolumeDB;
     }
 
 
+    /**
+     * Sets the maximum volume in decibels (dB) for this iPod.
+     *
+     * @param maxVolumeDB the new maximum volume in dB
+     */
     public void setMaxVolumeDB(final double maxVolumeDB)
     {
         this.maxVolumeDB = maxVolumeDB;

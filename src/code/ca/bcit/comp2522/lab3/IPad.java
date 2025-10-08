@@ -33,21 +33,41 @@ public class IPad extends IDevice
 
     // Getters and setters:
 
+    /**
+     * Checks if this iPad has a protective case.
+     *
+     * @return true if the iPad has a case, false otherwise
+     */
     public boolean hasCase()
     {
         return hasCase;
     }
 
+    /**
+     * Sets whether this iPad has a protective case.
+     *
+     * @param hasCase true if the iPad has a case, false otherwise
+     */
     public void setHasCase(final boolean hasCase)
     {
         this.hasCase = hasCase;
     }
 
+    /**
+     * Gets the operating system version of this iPad.
+     *
+     * @return the operating system version
+     */
     public String getOsVersion()
     {
         return osVersion;
     }
 
+    /**
+     * Sets the operating system version of this iPad.
+     *
+     * @param osVersion the new operating system version
+     */
     public void setOsVersion(final String osVersion)
     {
         this.osVersion = osVersion;

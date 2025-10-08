@@ -10,12 +10,11 @@ import java.util.Objects;
  * @author Jacob, Samuel, Meiko, Son
  * @version 1.0
  */
-public class IPhone extends IDevice
+public class IPhone
+    extends IDevice
 {
     private static final String PURPOSE = "talking";
-
     private double planRemainingMinutes;
-
     private String carrierName;
 
     /**
@@ -32,21 +31,41 @@ public class IPhone extends IDevice
         this.carrierName          = carrierName;
     }
 
+    /**
+     * Gets the number of minutes remaining on the phone plan.
+     *
+     * @return the remaining minutes on the phone plan
+     */
     public double getPlanRemainingMinutes()
     {
         return planRemainingMinutes;
     }
 
+    /**
+     * Sets the number of minutes remaining on the phone plan.
+     *
+     * @param planRemainingMinutes the new number of minutes remaining
+     */
     public void setPlanRemainingMinutes(final double planRemainingMinutes)
     {
         this.planRemainingMinutes = planRemainingMinutes;
     }
 
+    /**
+     * Gets the name of the carrier service provider.
+     *
+     * @return the carrier name
+     */
     public String getCarrierName()
     {
         return carrierName;
     }
 
+    /**
+     * Sets the name of the carrier service provider.
+     *
+     * @param carrierName the new carrier name
+     */
     public void setCarrierName(final String carrierName)
     {
         this.carrierName = carrierName;
