@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /**
  * Represents an Apple iPad device focused on learning and education.
  * This class extends IDevice and provides specific functionality
@@ -8,6 +10,8 @@
  */
 public class IPad extends IDevice
 {
+    private static final String PURPOSE = "learning";
+
     /**
      * Whether this iPad has a protective case
      */
@@ -24,9 +28,10 @@ public class IPad extends IDevice
      * @param hasCase   whether the iPad has a protective case
      * @param osVersion the operating system version
      */
-    public IPad(final boolean hasCase, final String osVersion)
+    public IPad(final boolean hasCase,
+                final String osVersion)
     {
-        super("learning");
+        super(PURPOSE);
         this.hasCase = hasCase;
         this.osVersion = osVersion;
     }
@@ -89,7 +94,7 @@ public class IPad extends IDevice
     @Override
     public String toString()
     {
-        return super.toString() + ", hasCase=" + hasCase
+        return super.toString() + " [hasCase=" + hasCase
                 + ", osVersion=" + osVersion + "]";
     }
 
@@ -97,18 +102,16 @@ public class IPad extends IDevice
      * Compares this iPad with another object for equality.
      * Two iPads are considered equal if they have the same operating system version.
      *
-     * @param obj the object to compare with
+     * @param o the object to compare with
      * @return true if objects are equal, false otherwise
      */
     @Override
-    public boolean equals(final Object obj)
+    public boolean equals(final Object o)
     {
-        if (obj instanceof IPad) {
-            IPad ipad = (IPad) obj;
-            return ipad.osVersion.equals(this.osVersion);
-        } else {
-            return false;
-        }
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        final IPad iPad = (IPad) o;
+        return Objects.equals(osVersion, iPad.osVersion);
     }
 
     /**
