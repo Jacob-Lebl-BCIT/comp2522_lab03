@@ -14,21 +14,21 @@ public class IPad extends IDevice
 {
     private static final String PURPOSE = "learning";
 
-    private boolean hasACase;
-    private String operatingSystemVersion;
+    private boolean hasCase;
+    private String osVersion;
 
     /**
      * Constructs a new IPad with the specified case status and OS version.
      *
-     * @param hasACase   whether the iPad has a protective case
-     * @param operatingSystemVersion the operating system version
+     * @param hasCase   whether the iPad has a protective case
+     * @param osVersion the operating system version
      */
-    public IPad(final boolean hasACase,
-                final String operatingSystemVersion)
+    public IPad(final boolean hasCase,
+                final String osVersion)
     {
         super(PURPOSE);
-        this.hasACase = hasACase;
-        this.operatingSystemVersion = operatingSystemVersion;
+        this.hasCase = hasCase;
+        this.osVersion = osVersion;
     }
 
     // Getters and setters:
@@ -38,19 +38,19 @@ public class IPad extends IDevice
      *
      * @return true if the iPad has a case, false otherwise
      */
-    public boolean getHasACase()
+    public boolean hasCase()
     {
-        return hasACase;
+        return hasCase;
     }
 
     /**
      * Sets whether this iPad has a protective case.
      *
-     * @param hasACase true if the iPad has a case, false otherwise
+     * @param hasCase true if the iPad has a case, false otherwise
      */
-    public void setHasACase(final boolean hasACase)
+    public void setHasCase(final boolean hasCase)
     {
-        this.hasACase = hasACase;
+        this.hasCase = hasCase;
     }
 
     /**
@@ -58,19 +58,19 @@ public class IPad extends IDevice
      *
      * @return the operating system version
      */
-    public String getOperatingSystemVersion()
+    public String getOsVersion()
     {
-        return operatingSystemVersion;
+        return osVersion;
     }
 
     /**
      * Sets the operating system version of this iPad.
      *
-     * @param operatingSystemVersion the new operating system version
+     * @param osVersion the new operating system version
      */
-    public void setOperatingSystemVersion(final String operatingSystemVersion)
+    public void setOsVersion(final String osVersion)
     {
-        this.operatingSystemVersion = operatingSystemVersion;
+        this.osVersion = osVersion;
     }
 
     // Implement IDevice methods:
@@ -81,8 +81,8 @@ public class IPad extends IDevice
     @Override
     public void printDetails()
     {
-        System.out.println("OS Version: " + operatingSystemVersion);
-        System.out.println("Has A Case: " + hasACase);
+        System.out.println("OS Version: " + osVersion);
+        System.out.println("Has Case: " + hasCase);
     }
 
     /**
@@ -93,8 +93,8 @@ public class IPad extends IDevice
     @Override
     public String toString()
     {
-        return super.toString() + " [hasACase=" + hasACase
-                + ", operatingSystemVersion=" + operatingSystemVersion + "]";
+        return super.toString() + " [hasCase=" + hasCase
+                + ", osVersion=" + osVersion + "]";
     }
 
     /**
@@ -110,7 +110,7 @@ public class IPad extends IDevice
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         final IPad iPad = (IPad) o;
-        return Objects.equals(operatingSystemVersion, iPad.operatingSystemVersion);
+        return Objects.equals(osVersion, iPad.osVersion);
     }
 
     /**
@@ -121,6 +121,6 @@ public class IPad extends IDevice
     @Override
     public int hashCode()
     {
-        return operatingSystemVersion.hashCode();
+        return osVersion.hashCode();
     }
 }
