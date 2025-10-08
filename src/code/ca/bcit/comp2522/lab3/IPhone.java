@@ -16,20 +16,20 @@ public class IPhone extends IDevice
 
     private double planRemainingMinutes;
 
-    /** The name of the carrier service provider */
-    private String carrier;
+    private String carrierName;
 
     /**
      * Constructs a new IPhone with the specified remaining minutes and carrier.gi
      *
      * @param planRemainingMinutes the number of minutes remaining on the phone plan
-     * @param carrier the name of the carrier service provider
+     * @param carrierName the name of the carrier service provider
      */
-    public IPhone(final double planRemainingMinutes, final String carrier)
+    public IPhone(final double planRemainingMinutes,
+                  final String carrierName)
     {
         super(PURPOSE);
         this.planRemainingMinutes = planRemainingMinutes;
-        this.carrier              = carrier;
+        this.carrierName          = carrierName;
     }
 
     /**
@@ -57,19 +57,19 @@ public class IPhone extends IDevice
      *
      * @return the carrier name
      */
-    public String getCarrier()
+    public String getCarrierName()
     {
-        return carrier;
+        return carrierName;
     }
 
     /**
      * Sets the name of the carrier service provider.
      *
-     * @param carrier the new carrier name
+     * @param carrierName the new carrier name
      */
-    public void setCarrier(final String carrier)
+    public void setCarrierName(final String carrierName)
     {
-        this.carrier = carrier;
+        this.carrierName = carrierName;
     }
 
     /**
@@ -78,7 +78,7 @@ public class IPhone extends IDevice
     @Override
     public void printDetails()
     {
-        System.out.println("Carrier: " + carrier);
+        System.out.println("Carrier: " + carrierName);
         System.out.println("Remaining Minutes: " + planRemainingMinutes);
     }
 
@@ -90,7 +90,7 @@ public class IPhone extends IDevice
     @Override
     public String toString()
     {
-        return super.toString() + " [carrier=" + carrier
+        return super.toString() + " [carrier=" + carrierName
                 + ", numberOfMinutesRemainingOnPhonePlan=" + planRemainingMinutes + "]";
     }
 
