@@ -1,5 +1,7 @@
 package ca.bcit.comp2522.lab3;
 
+import java.util.Objects;
+
 /**
  * Represents an Apple iPhone 16 device with enhanced features.
  * This class extends IPhone and provides additional functionality
@@ -10,66 +12,48 @@ package ca.bcit.comp2522.lab3;
  */
 public class IPhone16 extends IPhone
 {
-    /** Whether this iPhone has a high-resolution camera */
     private boolean highResCamera;
+    private int memorySizeGB;
 
-    /** The memory size in gigabytes */
-    private int memorySize;
-
-    /**
+    /** === useless? ===
      * Constructs a new IPhone16 with the specified features.
      *
      * @param remainingMinutes the number of minutes remaining on the phone plan
      * @param carrierName the name of the carrier service provider
      * @param highResCamera whether the device has a high-resolution camera
-     * @param memorySize the memory size in gigabytes
+     * @param memorySizeGB the memory size in gigabytes
      */
-    public IPhone16(final double remainingMinutes, final String carrierName,
-                    final boolean highResCamera, final int memorySize)
+    public IPhone16(final double remainingMinutes,
+                    final String carrierName,
+                    final boolean highResCamera,
+                    final int memorySizeGB)
     {
         super(remainingMinutes, carrierName);
         this.highResCamera = highResCamera;
-        this.memorySize = memorySize;
+        this.memorySizeGB  = memorySizeGB;
     }
 
-    /**
-     * Checks whether this iPhone has a high-resolution camera.
-     *
-     * @return true if the device has a high-resolution camera, false otherwise
-     */
+
     public boolean hasHighResCamera()
     {
         return highResCamera;
     }
 
-    /**
-     * Sets whether this iPhone has a high-resolution camera.
-     *
-     * @param highResCamera true if the device has a high-resolution camera, false otherwise
-     */
+
     public void setHighResCamera(final boolean highResCamera)
     {
         this.highResCamera = highResCamera;
     }
 
-    /**
-     * Retrieves the memory size of this iPhone.
-     *
-     * @return the memory size in gigabytes
-     */
-    public int getMemorySize()
+    public int getMemorySizeGB()
     {
-        return memorySize;
+        return memorySizeGB;
     }
 
-    /**
-     * Sets the memory size of this iPhone.
-     *
-     * @param memorySize the new memory size in gigabytes
-     */
-    public void setMemorySize(final int memorySize)
+
+    public void setMemorySizeGB(final int memorySizeGB)
     {
-        this.memorySize = memorySize;
+        this.memorySizeGB = memorySizeGB;
     }
 
     /**
@@ -80,8 +64,8 @@ public class IPhone16 extends IPhone
     @Override
     public String toString()
     {
-        return super.toString().replace("]", ", highResCamera=" + highResCamera
-                + ", memorySize=" + memorySize + " GB]");
+        return super.toString().replace("[", ", highResCamera=" + highResCamera
+                + ", memorySize=" + memorySizeGB + " GB]");
     }
 
     /**
@@ -89,18 +73,17 @@ public class IPhone16 extends IPhone
      * Two iPhone 16 devices are considered equal if they have the same remaining minutes
      * AND the same high-resolution camera status.
      *
-     * @param obj the object to compare with
+     * @param o the object to compare with
      * @return true if objects are equal, false otherwise
      */
     @Override
-    public boolean equals(final Object obj)
+    public boolean equals(final Object o)
     {
-        if (obj instanceof IPhone16) {
-            IPhone16 other = (IPhone16) obj;
-            return super.equals(other) && this.highResCamera == other.highResCamera;
-        } else {
-            return false;
-        }
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        final IPhone16 other = (IPhone16) o;
+        return Objects.equals(other.highResCamera, highResCamera);
+
     }
 
     /**
@@ -111,6 +94,6 @@ public class IPhone16 extends IPhone
     @Override
     public int hashCode()
     {
-        return Double.hashCode(getRemainingMinutes()) + (highResCamera ? 1 : 0);
+        return Double.hashCode(getPlanRemainingMinutes()) + (highResCamera ? 1 : 0);
     }
 }
