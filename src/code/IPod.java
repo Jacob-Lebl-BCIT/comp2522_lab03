@@ -29,12 +29,12 @@ public class IPod extends IDevice
     {
         super(PURPOSE);
         this.numStoredSongs = numStoredSongs;
+        this.maxVolumeDB = maxVolumeDB;
     }
 
     /**
-     * printDetails prints all the instance variables of the IPod.
+     * printDetails prints an english description of all the instance variables in the IPod.
      *
-     * @return an English description of the IPod's instance variables.
      */
     @Override
     public void printDetails()
@@ -48,21 +48,18 @@ public class IPod extends IDevice
      * @return all instance variables in a single String.
      */
     @Override
-    public String toString() {
-        // Get the string from the superclass.
-        String IDeviceString = super.toString();
-        // Sum of all instance variables.
-        return IDeviceString + " " + numStoredSongs + " " + maxVolumeDB;
+    public String toString()
+    {
+        return super.toString() + " [numStoredSongs=" + numStoredSongs + ", maxVolumeDB=" + maxVolumeDB + "]";
     }
 
     @Override
-    public boolean equals(Object o)
+    public boolean equals(final Object o)
     {
-        if (!(o instanceof IPod otherIPod))
-        {
-            return false;
-        }
-        return numStoredSongs == otherIPod.numStoredSongs;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        final IPod iPod = (IPod) o;
+        return numStoredSongs == iPod.numStoredSongs;
     }
 
     @Override
