@@ -21,7 +21,9 @@ public abstract class IDevice
     }
 
     /**
-     * getPurpose returns the purpose of the device as a string.
+     * Gets the purpose of the device.
+     *
+     * @return the purpose of the device as a string
      */
     public String getPurpose()
     {

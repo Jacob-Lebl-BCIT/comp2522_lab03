@@ -15,7 +15,7 @@ public class IPhone16 extends IPhone
     private boolean highResCamera;
     private int memorySizeGB;
 
-    /** === useless? ===
+    /**
      * Constructs a new IPhone16 with the specified features.
      *
      * @param remainingMinutes the number of minutes remaining on the phone plan

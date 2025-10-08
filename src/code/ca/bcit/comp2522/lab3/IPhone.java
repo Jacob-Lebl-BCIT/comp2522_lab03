@@ -18,7 +18,7 @@ public class IPhone
     private String carrierName;
 
     /**
-     * Constructs a new IPhone with the specified remaining minutes and carrier.gi
+     * Constructs a new IPhone with the specified remaining minutes and carrier.
      *
      * @param planRemainingMinutes the number of minutes remaining on the phone plan
      * @param carrierName the name of the carrier service provider
@@ -110,6 +110,11 @@ public class IPhone
         return Objects.equals(iPhone.planRemainingMinutes, planRemainingMinutes);
     }
 
+    /**
+     * Generates a hash code for this iPhone based on the remaining minutes.
+     *
+     * @return hash code for this object
+     */
     @Override
     public int hashCode()
     {

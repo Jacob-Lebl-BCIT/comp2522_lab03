@@ -17,6 +17,12 @@ public class IPod extends IDevice
     private int numStoredSongs;
     private double maxVolumeDB;
 
+    /**
+     * Constructs a new IPod with the specified number of songs and maximum volume.
+     *
+     * @param numStoredSongs the number of songs stored on this iPod
+     * @param maxVolumeDB the maximum volume in decibels
+     */
     public IPod(final int numStoredSongs,
                 final double maxVolumeDB)
     {
@@ -69,8 +75,7 @@ public class IPod extends IDevice
     }
 
     /**
-     * printDetails prints an english description of all the instance variables in the IPod.
-     *
+     * Prints detailed information about this iPod's features.
      */
     @Override
     public void printDetails()
@@ -108,6 +113,11 @@ public class IPod extends IDevice
         return Objects.equals(numStoredSongs, iPod.numStoredSongs);
     }
 
+    /**
+     * Generates a hash code for this IPod based on the number of stored songs.
+     *
+     * @return hash code for this object
+     */
     @Override
     public int hashCode()
     {
