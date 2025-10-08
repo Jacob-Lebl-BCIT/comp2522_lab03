@@ -13,24 +13,38 @@ import java.util.Objects;
 public class IPod extends IDevice
 {
 
-    // The purpose of all IPod instances is music.
     private static final String PURPOSE = "music";
-    // The number of songs stored on the iPod.
     private int numStoredSongs;
-    // The maximum volume level of the iPod in decibels.
     private double maxVolumeDB;
 
-    /**
-     * Constructor for IDevice.
-     *
-     * @param numStoredSongs the number of songs stored on the iPod.
-     * @param maxVolumeDB    the maximum volume level of the iPod in decibels.
-     */
     public IPod(final int numStoredSongs,
                 final double maxVolumeDB)
     {
         super(PURPOSE);
         this.numStoredSongs = numStoredSongs;
+        this.maxVolumeDB = maxVolumeDB;
+    }
+
+    // === Setters & Getters ===
+
+    public int getNumStoredSongs()
+    {
+        return numStoredSongs;
+    }
+
+    public void setNumStoredSongs(final int numStoredSongs)
+    {
+        this.numStoredSongs = numStoredSongs;
+    }
+
+    public double getMaxVolumeDB()
+    {
+        return maxVolumeDB;
+    }
+
+
+    public void setMaxVolumeDB(final double maxVolumeDB)
+    {
         this.maxVolumeDB = maxVolumeDB;
     }
 
@@ -45,23 +59,33 @@ public class IPod extends IDevice
         System.out.println("Max volume DB: " + maxVolumeDB);
     }
 
-
     /**
-     * @return all instance variables in a single String.
+     * Returns a string representation of this IPod.
+     *
+     * @return formatted string containing IPod information
      */
     @Override
     public String toString()
     {
-        return super.toString() + " [numStoredSongs=" + numStoredSongs + ", maxVolumeDB=" + maxVolumeDB + "]";
+        return super.toString() + " [numStoredSongs=" + numStoredSongs
+                                + ", maxVolumeDB=" + maxVolumeDB + "]";
     }
 
+    /**
+     * Compares this IPod with another object for equality.
+     * Two IPods are considered equal if they have the same
+     * number of stored songs.
+     *
+     * @param o the object to compare with
+     * @return true if objects are equal, false otherwise
+     */
     @Override
     public boolean equals(final Object o)
     {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         final IPod iPod = (IPod) o;
-        return numStoredSongs == iPod.numStoredSongs;
+        return Objects.equals(numStoredSongs, iPod.numStoredSongs);
     }
 
     @Override
@@ -70,43 +94,5 @@ public class IPod extends IDevice
         return Objects.hashCode(numStoredSongs);
     }
 
-    // === Setters & Getters ===
 
-    /**
-     * @return the number of songs stored on the iPod.
-     *
-     */
-    public int getNumStoredSongs()
-    {
-        return numStoredSongs;
-    }
-
-    /**
-     * setNumStoredSongs sets the number of songs stored on the iPod.
-     *
-     * @param numStoredSongs int of stored songs.
-     */
-    public void setNumStoredSongs(final int numStoredSongs)
-    {
-        this.numStoredSongs = numStoredSongs;
-    }
-
-    /**
-     * @return the maximum volume level of the iPod in decibels.
-     *
-     */
-    public double getMaxVolumeDB()
-    {
-        return maxVolumeDB;
-    }
-
-    /**
-     * setMaxVolumeDB sets the maximum volume level of the iPod in decibels.
-     *
-     * @param maxVolumeDB volume in decibels.
-     */
-    public void setMaxVolumeDB(final double maxVolumeDB)
-    {
-        this.maxVolumeDB = maxVolumeDB;
-    }
 }
