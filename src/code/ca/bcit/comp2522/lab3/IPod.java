@@ -14,21 +14,21 @@ public class IPod extends IDevice
 {
 
     private static final String PURPOSE = "music";
-    private int numStoredSongs;
-    private double maxVolumeDB;
+    private int numberOfSongsStored;
+    private double maxVolumeInDecibels;
 
     /**
      * Constructs a new IPod with the specified number of songs and maximum volume.
      *
-     * @param numStoredSongs the number of songs stored on this iPod
-     * @param maxVolumeDB the maximum volume in decibels
+     * @param numberOfSongsStored the number of songs stored on this iPod
+     * @param maxVolumeInDecibels the maximum volume in decibels
      */
-    public IPod(final int numStoredSongs,
-                final double maxVolumeDB)
+    public IPod(final int numberOfSongsStored,
+                final double maxVolumeInDecibels)
     {
         super(PURPOSE);
-        this.numStoredSongs = numStoredSongs;
-        this.maxVolumeDB = maxVolumeDB;
+        this.numberOfSongsStored = numberOfSongsStored;
+        this.maxVolumeInDecibels = maxVolumeInDecibels;
     }
 
     // === Setters & Getters ===
@@ -38,19 +38,19 @@ public class IPod extends IDevice
      *
      * @return the number of stored songs
      */
-    public int getNumStoredSongs()
+    public int getNumberOfSongsStored()
     {
-        return numStoredSongs;
+        return numberOfSongsStored;
     }
 
     /**
      * Sets the number of stored songs on this iPod.
      *
-     * @param numStoredSongs the new number of stored songs
+     * @param numberOfSongsStored the new number of stored songs
      */
-    public void setNumStoredSongs(final int numStoredSongs)
+    public void setNumberOfSongsStored(final int numberOfSongsStored)
     {
-        this.numStoredSongs = numStoredSongs;
+        this.numberOfSongsStored = numberOfSongsStored;
     }
 
     /**
@@ -58,20 +58,20 @@ public class IPod extends IDevice
      *
      * @return the maximum volume in dB
      */
-    public double getMaxVolumeDB()
+    public double getMaxVolumeInDecibels()
     {
-        return maxVolumeDB;
+        return maxVolumeInDecibels;
     }
 
 
     /**
      * Sets the maximum volume in decibels (dB) for this iPod.
      *
-     * @param maxVolumeDB the new maximum volume in dB
+     * @param maxVolumeInDecibels the new maximum volume in dB
      */
-    public void setMaxVolumeDB(final double maxVolumeDB)
+    public void setMaxVolumeInDecibels(final double maxVolumeInDecibels)
     {
-        this.maxVolumeDB = maxVolumeDB;
+        this.maxVolumeInDecibels = maxVolumeInDecibels;
     }
 
     /**
@@ -80,8 +80,8 @@ public class IPod extends IDevice
     @Override
     public void printDetails()
     {
-        System.out.println("Number of stored songs: " + numStoredSongs);
-        System.out.println("Max volume DB: " + maxVolumeDB);
+        System.out.println("Number of stored songs: " + numberOfSongsStored);
+        System.out.println("Max volume in decibels: " + maxVolumeInDecibels);
     }
 
     /**
@@ -92,8 +92,8 @@ public class IPod extends IDevice
     @Override
     public String toString()
     {
-        return super.toString() + " [numStoredSongs=" + numStoredSongs
-                                + ", maxVolumeDB=" + maxVolumeDB + "]";
+        return super.toString() + " [numberOfSongsStored=" + numberOfSongsStored
+                                + ", maxVolumeInDecibels=" + maxVolumeInDecibels + "]";
     }
 
     /**
@@ -110,7 +110,7 @@ public class IPod extends IDevice
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         final IPod iPod = (IPod) o;
-        return Objects.equals(numStoredSongs, iPod.numStoredSongs);
+        return Objects.equals(numberOfSongsStored, iPod.numberOfSongsStored);
     }
 
     /**
@@ -121,7 +121,7 @@ public class IPod extends IDevice
     @Override
     public int hashCode()
     {
-        return Objects.hashCode(numStoredSongs);
+        return Objects.hashCode(numberOfSongsStored);
     }
 
 
