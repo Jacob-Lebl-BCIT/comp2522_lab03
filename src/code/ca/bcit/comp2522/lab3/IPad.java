@@ -1,3 +1,5 @@
+package ca.bcit.comp2522.lab3;
+
 import java.util.Objects;
 
 /**
@@ -12,14 +14,7 @@ public class IPad extends IDevice
 {
     private static final String PURPOSE = "learning";
 
-    /**
-     * Whether this iPad has a protective case
-     */
     private boolean hasCase;
-
-    /**
-     * The operating system version installed on this iPad
-     */
     private String osVersion;
 
     /**
@@ -36,45 +31,29 @@ public class IPad extends IDevice
         this.osVersion = osVersion;
     }
 
-    /**
-     * Checks whether this iPad has a protective case.
-     *
-     * @return true if the iPad has a case, false otherwise
-     */
+    // Getters and setters:
+
     public boolean hasCase()
     {
         return hasCase;
     }
 
-    /**
-     * Sets whether this iPad has a protective case.
-     *
-     * @param hasCase true if the iPad has a case, false otherwise
-     */
     public void setHasCase(final boolean hasCase)
     {
         this.hasCase = hasCase;
     }
 
-    /**
-     * Retrieves the operating system version of this iPad.
-     *
-     * @return the operating system version
-     */
     public String getOsVersion()
     {
         return osVersion;
     }
 
-    /**
-     * Sets the operating system version of this iPad.
-     *
-     * @param osVersion the new operating system version
-     */
     public void setOsVersion(final String osVersion)
     {
         this.osVersion = osVersion;
     }
+
+    // Implement IDevice methods:
 
     /**
      * Prints detailed information about this iPad's features.

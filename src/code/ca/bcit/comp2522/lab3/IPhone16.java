@@ -1,3 +1,5 @@
+package ca.bcit.comp2522.lab3;
+
 /**
  * Represents an Apple iPhone 16 device with enhanced features.
  * This class extends IPhone and provides additional functionality

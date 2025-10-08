@@ -1,3 +1,5 @@
+package ca.bcit.comp2522.lab3;
+
 /**
  * Main class for testing the iDevice inheritance hierarchy.
  * This class demonstrates the functionality of all device types

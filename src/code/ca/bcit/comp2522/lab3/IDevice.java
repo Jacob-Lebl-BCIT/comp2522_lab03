@@ -1,3 +1,5 @@
+package ca.bcit.comp2522.lab3;
+
 /**
  * IDevice a high level representation of apple mobile devices.
  * @author Jacob, Samuel, Meiko, Son
