@@ -64,8 +64,8 @@ public class IPhone16 extends IPhone
     @Override
     public String toString()
     {
-        return super.toString().replace("[", ", highResCamera=" + highResCamera
-                + ", memorySize=" + memorySizeGB + " GB]");
+        return super.toString() + " [ highResCamera=" + highResCamera
+                                    + ", memorySize=" + memorySizeGB + " GB]";
     }
 
     /**
